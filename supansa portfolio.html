@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>แฟ้มสะสมผลงาน - สุพรรษา ศิริเพ็ชร</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#e86a97; --pink-dark:#c8215f; --pink-soft:#f9d3e1; --pink-bg:#fbeaf1; --text:#3a3a3a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Prompt',sans-serif;color:var(--text);background:#fff;padding-top:80px}
+
+  /* ---------- เมนู ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:10;background:#fbf1f5;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:12px 5%}
+  .logo{color:var(--pink);font-weight:700;font-size:20px}
+  nav{display:flex;flex-wrap:wrap;gap:4px;background:#f3dfe8;border-radius:30px;padding:4px}
+  nav a{text-decoration:none;color:var(--text);font-weight:500;font-size:15px;padding:7px 18px;border-radius:30px}
+  nav a:hover,nav a.active{background:var(--pink);color:#fff}
+
+  /* ---------- ส่วนทั่วไป ---------- */
+  section{min-height:100vh;padding:60px 6%;position:relative;overflow:hidden;text-align:center;scroll-margin-top:70px}
+  h1,h2{color:var(--pink-dark);font-weight:700;text-shadow:0 0 0 #fff;}
+  h2{font-size:clamp(32px,6vw,60px);margin-bottom:8px}
+  .sub{color:var(--pink);margin-bottom:30px}
+  .pill{display:inline-block;background:var(--pink-soft);color:var(--pink-dark);font-weight:700;
+    padding:10px 30px;border-radius:30px;font-size:20px}
+  .card{background:var(--pink-bg);border-radius:20px;padding:22px;box-shadow:0 4px 14px rgba(232,106,151,.25);text-align:left}
+  .wave{position:absolute;right:0;bottom:0;width:60%;height:120px;background:var(--pink);
+    border-top-left-radius:100% 100%;opacity:.8;z-index:0}
+  section>*{position:relative;z-index:1}
+
+  /* ---------- 1 หน้าหลัก ---------- */
+  #home{display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap}
+  .polaroid{background:#f1f3ee;padding:14px 14px 40px;transform:rotate(-3deg);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .polaroid img{width:280px;max-width:70vw;display:block}
+  #home h1{font-size:clamp(40px,8vw,84px)}
+  #home .pill{margin:16px 0}
+  .name{font-size:24px;font-weight:500}
+
+  /* ---------- 2 ประวัติ ---------- */
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto 24px}
+  .card h3{background:var(--pink-soft);color:var(--pink-dark);border-radius:30px;padding:8px 20px;margin-bottom:14px;font-size:20px}
+  .card p{margin:8px 0;font-weight:500}
+  .intro{max-width:900px;margin:0 auto}
+
+  /* ---------- 3 ผลงาน ---------- */
+  .works{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1000px;margin:30px auto 0}
+  .works img{width:100%;height:200px;object-fit:cover;border-radius:8px;background:#ddd}
+  .works h4{color:var(--pink-dark);margin-top:10px;font-size:18px}
+
+  /* ---------- 4 ความสามารถ ---------- */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;max-width:900px;margin:40px auto 0}
+  .skill{display:flex;align-items:center;gap:14px;background:var(--pink-soft);border-radius:40px;padding-right:20px;text-align:left;font-size:18px}
+  .skill span{background:var(--pink);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:30px;flex-shrink:0}
+
+  /* ---------- 5 ติดต่อ ---------- */
+  .grid2 .card.box{padding:0;overflow:hidden}
+  .box h3{background:var(--pink);color:#fff;border-radius:0;margin:0;padding:16px 24px}
+  .box div{padding:20px 24px;font-size:18px;line-height:2}
+
+  footer{text-align:center;padding:20px;color:var(--pink);font-size:14px}
+</style>
+</head>
+<body>
+
+<!-- ===== เมนู ===== -->
+<header>
+  <div class="logo">🎓 PORTFOLIO</div>
+  <nav>
+    <a href="#home" class="active">หน้าหลัก</a>
+    <a href="#about">ประวัติ</a>
+    <a href="#works">ผลงาน</a>
+    <a href="#skills">ความสามารถ</a>
+    <a href="#contact">ติดต่อ</a>
+    <a href="#contact">สนับสนุน</a>
+  </nav>
+</header>
+
+<!-- ===== 1 หน้าหลัก ===== -->
+<section id="home">
+  <!-- ใส่รูปของคุณที่ images/profile.jpg -->
+  <div class="polaroid"><img src="images/profile.jpg" alt="รูปโปรไฟล์"></div>
+  <div>
+    <h1>แฟ้มสะสมผลงาน</h1>
+    <div class="pill">แนะนำตัว ผลงาน และความสามารถของฉัน</div>
+    <p class="name">ชื่อ : นางสาว สุพรรษา ศิริเพ็ชร ( เรย์ ) 🤍</p>
+  </div>
+  <div class="wave"></div>
+</section>
+
+<!-- ===== 2 ประวัติ ===== -->
+<section id="about">
+  <h2>ประวัติของฉัน ♡</h2>
+  <p class="sub">เรื่องราวเล็ก ๆ ที่ทำให้ฉันเป็นฉันในวันนี้</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>👤 ข้อมูลส่วนตัว</h3>
+      <p>วันเกิด : 22 / 07 / 2005</p>
+      <p>ที่อยู่ : 6 หมู่ 11 ต. ปากน้ำ อ. บางคล้า จ. ฉะเชิงเทรา</p>
+    </div>
+    <div class="card">
+      <h3>🎓 ประวัติการศึกษา</h3>
+      <p>สถานศึกษา : วิทยาลัยเทคโนโลยีสว่างบริบูรณ์ พัทยา</p>
+      <p>ระดับการศึกษา : กำลังศึกษาอยู่ระดับประกาศนียบัตรวิชาชีพชั้นปีที่ 2</p>
+      <p>สาขาวิชา : เทคโนโลยีธุรกิจดิจิทัล</p>
+    </div>
+  </div>
+  <div class="intro card">
+    <h3>♥ แนะนำตัว</h3>
+    <p>เป็นคนชื่นชอบเทคโนโลยี คอมพิวเตอร์ และการเรียนรู้สิ่งใหม่ ๆ มีความตั้งใจพัฒนาตัวเองอยู่เสมอ พร้อมนำความรู้และประสบการณ์ไปต่อยอดเพื่อสร้างอนาคตที่ดี</p>
+  </div>
+</section>
+
+<!-- ===== 3 ผลงาน ===== -->
+<section id="works">
+  <h2>ผลงานของฉัน</h2>
+  <div class="pill">ผลงานที่ภาคภูมิใจ</div>
+  <p class="sub" style="margin-top:14px">ผลงานเหล่านี้สะท้อนถึงความตั้งใจ ความพยายาม<br>และการพัฒนาของฉันในเส้นทางสายอาชีพ</p>
+  <div class="works">
+    <!-- เปลี่ยนรูปที่ images/work1.jpg, work2.jpg, work3.jpg -->
+    <div class="card"><img src="images/work1.jpg" alt=""><h4>รายละเอียดผลงาน</h4><p>แข่งขันทักษะวิชาชีพการพิมพ์ดีด</p></div>
+    <div class="card"><img src="images/work2.png" alt=""><h4>รายละเอียดผลงาน</h4><p>ประกวดชุดไทยพระราชนิยม</p></div>
+    <div class="card"><img src="images/work3.jpg" alt=""><h4>รายละเอียดผลงาน</h4><p>ประกวดอาหมวยวันตรุษจีนประจำวิทยาลัย</p></div>
+  </div>
+  <div class="wave"></div>
+</section>
+
+<!-- ===== 4 ความสามารถ ===== -->
+<section id="skills">
+  <h2>♥ ความสามารถของฉัน ♥</h2>
+  <div class="skills">
+    <div class="skill"><span>💡</span>ร้องเพลงและเต้น</div>
+    <div class="skill"><span>💡</span>มีทักษะธุรกิจการขาย</div>
+    <div class="skill"><span>💡</span>สื่อสารภาษาอังกฤษได้</div>
+    <div class="skill"><span>💡</span>มีทักษะด้านการใช้คอมพิวเตอร์</div>
+    <div class="skill"><span>💡</span>ใช้โปรแกรมกราฟฟิกพื้นฐานได้</div>
+    <div class="skill"><span>💡</span>มีความคิดสร้างสรรค์</div>
+  </div>
+  <div class="wave"></div>
+</section>
+
+<!-- ===== 5 ติดต่อและสนับสนุน ===== -->
+<section id="contact">
+  <h2>ติดต่อและสนับสนุน</h2>
+  <div class="pill">contact &amp; donate</div>
+  <div class="grid2" style="margin-top:30px">
+    <div class="card box">
+      <h3>💬 ช่องทางการติดต่อ</h3>
+      <div>Email : Butterflyisreal30@gmail.com<br>Line : supansa_zk12<br>Call : 064 - 5230240</div>
+    </div>
+    <div class="card box">
+      <h3>♥ สนับสนุน</h3>
+      <div>Kasikornbank : 194 - 381 - 5107<br>PromptPay : 0645230240<br>TureMoney : 0645230240</div>
+    </div>
+  </div>
+  <div class="wave"></div>
+</section>
+
+<footer>© 2026 แฟ้มสะสมผลงาน - สุพรรษา ศิริเพ็ชร</footer>
+
+<script>
+  // ทำให้เมนูไฮไลต์ตามหน้าที่กำลังดู
+  const links = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    let current = 'home';
+    sections.forEach(s => { if (scrollY >= s.offsetTop - 150) current = s.id; });
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  });
+</script>
+</body>
+</html>
